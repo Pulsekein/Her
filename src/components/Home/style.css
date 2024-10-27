@@ -1,0 +1,76 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif; /* Set a base font */
+}
+
+.heart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #ff3e8f; /* Pink color for the heart */
+    transform: rotate(-45deg);
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #ff3e8f; /* Same pink color */
+    border-radius: 75px; /* Make it circular */
+}
+
+.heart::before {
+    top: -75px; /* Position the top half of the heart */
+    left: 0;
+}
+
+.heart::after {
+    left: 75px; /* Position the right half of the heart */
+    top: 0;
+}
+
+.heart:hover {
+    transform: rotate(-45deg) scale(1.1); /* Slightly scale up on hover */
+}
+
+.heart-text {
+    position: relative;
+    color: white; /* White text color for contrast */
+    text-align: center;
+    font-size: 18px; /* Increase font size for better readability */
+    font-weight: bold; /* Make text bold */
+    padding: 20px; /* Add padding for better spacing */
+    margin: 0; /* Remove margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow for text */
+}
+
+button {
+    margin-top: 10px; /* Space between text and button */
+    padding: 12px 24px; /* Button padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ff5c8a; /* A slightly darker pink */
+    color: white; /* White text on the button */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+    position: relative; /* Position relative for stacking */
+    z-index: 1; /* Ensure button is above the heart */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow to button */
+}
+
+button:hover {
+    background-color: #ff3e8f; /* Change color on hover */
+    transform: translateY(-2px); /* Lift the button on hover */
+}

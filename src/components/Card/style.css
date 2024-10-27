@@ -1,0 +1,17 @@
+.card {
+    width: 300px; /* Set a fixed width for the card */
+    border: 1px solid #ddd; /* Light border for the card */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image does not overflow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    display: flex; /* Flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 20px; /* Margin around the card */
+    background-color: #fff; /* Background color for the card */
+}
+
+.card-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
